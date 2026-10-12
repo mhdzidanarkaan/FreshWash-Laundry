@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshWash Laundry | Pakaian Bersih, Waktu Lebih Praktis</title>
+    <meta name="description" content="Layanan laundry buat bantu pakaian kamu tetap bersih dan wangi.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10Z"/><path d="M12 2v20"/><path d="M12 7a5 5 0 1 0 0 10"/></svg>
+                <span id="nav-brand-name">LaundryWeb</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#beranda" class="nav-link active">Beranda</a>
+                <a href="#layanan" class="nav-link">Layanan</a>
+                <a href="#harga" class="nav-link">Harga</a>
+                <a href="#tentang" class="nav-link">Tentang</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <button class="btn btn-primary" onclick="orderLaundry('Tanya Umum')">Chat Kami</button>
+            </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">Jasa Laundry</span>
+                    <h1>Cucian Numpuk? <br><span class="text-accent">Serahin Aja ke Kami.</span></h1>
+                    <p id="hero-desc">Nggak perlu repot ngurus cucian sendiri. Kami bantu supaya pakaian kamu bersih, rapi, dan wangi. Jadi kamu bisa punya lebih banyak waktu buat kegiatan lain.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large" onclick="orderLaundry('Pemesanan Baru')">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Chat Kami di WhatsApp
+                        </button>
+                        <a href="#layanan" class="btn btn-outline btn-large">Cek Layanan</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <div class="hero-shape"></div>
+                    <img src="assets/hero.png" alt="Tumpukan handuk dan pakaian bersih" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="keunggulan" class="features bg-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Kenapa Pilih Laundry Kami?</h2>
+                    <p>Kami berusaha memberikan layanan yang nyaman dan sesuai kebutuhan kamu.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h3>Lebih Praktis</h3>
+                        <p>Nggak perlu capek nyuci sendiri. Kamu bisa menggunakan waktu buat belajar, kerja, atau istirahat.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Banyak Pilihan Layanan</h3>
+                        <p>Ada beberapa pilihan layanan yang bisa kamu sesuaikan, mulai dari cuci pakaian biasa sampai bed cover.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <h3>Harga Jelas</h3>
+                        <p>Daftar harga sudah tertera lengkap di website. Kamu bisa langsung cek biayanya dari awal tanpa takut ada tagihan tersembunyi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="layanan" class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Layanan Laundry</h2>
+                    <p>Pilih Layanan yang Dibutuhkan yang cocok dengan kebutuhan cucian kamu.</p>
+                </div>
+                <div class="services-grid" id="services-container"></div>
+            </div>
+        </section>
+
+        <section id="harga" class="pricing bg-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Daftar Harga</h2>
+                </div>
+                <div class="pricing-container" id="pricing-container"></div>
+            </div>
+        </section>
+
+        <section id="cara-pesan" class="steps">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Cara Pesan Laundry</h2>
+                    <p>Cukup ikuti tiga langkah berikut untuk memesan layanan.</p>
+                </div>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Pilih Layanan yang Dibutuhkan</h3>
+                        <p>Lihat daftar layanan yang tersedia, lalu pilih yang sesuai dengan cucian kamu.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Chat Kami</h3>
+                        <p>Klik tombol WhatsApp, lalu sampaikan layanan yang ingin kamu pesan.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Tunggu Konfirmasi</h3>
+                        <p>Kami akan memberi informasi mengenai perkiraan harga dan kapan cucian bisa selesai.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang" class="about-contact bg-light">
+            <div class="container">
+                <div class="ac-grid">
+                    <div class="about-content">
+                        <h2>Tentang <span id="about-brand-name">Kami</span></h2>
+                        <p id="about-desc">Laundry kami hadir untuk membantu kebutuhan mencuci pakaian sehari-hari. Dengan layanan yang praktis, kami berharap kamu bisa menghemat waktu dan nggak perlu repot mengurus semua cucian sendiri.</p>
+                        
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <div>
+                                    <h4>Alamat</h4>
+                                    <p id="info-address">Memuat alamat...</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <div>
+                                    <h4>Jam Buka</h4>
+                                    <p id="info-hours">Memuat jam...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/about.png" alt="Suasana tempat laundry">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Pertanyaan yang Sering Ditanyakan</h2>
+                    <p>Masih bingung soal layanan kami? Cek beberapa pertanyaan berikut.</p>
+                </div>
+                <div class="faq-container">
+                    <div class="accordion">
+                        <button class="accordion-header" aria-expanded="false">
+                            Gimana cara pesan laundry?
+                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Anda cukup menekan tombol "Chat Kami" atau tombol WhatsApp pada halaman ini. Anda akan langsung terhubung ke nomor WhatsApp kami untuk berdiskusi mengenai pesanan Anda.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-header" aria-expanded="false">
+                            Apakah harga laundry bisa berubah?
+                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Harga yang tertera masih berupa perkiraan. Biaya akhirnya bisa berbeda tergantung jenis cucian atau layanan tambahan yang kamu butuhkan.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-header" aria-expanded="false">
+                            Bagaimana cara tahu kalau cucian sudah selesai?
+                            <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Tim kami akan memberitahukan estimasi waktu selesai saat Tunggu Konfirmasi awal. Kami juga akan mengirimkan pesan pemberitahuan melalui WhatsApp ketika pakaian Anda sudah siap diambil.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <h3 id="footer-brand-name">LaundryWeb</h3>
+                <p>Bantu urusan cucian jadi lebih mudah, supaya kamu punya lebih banyak waktu untuk hal lain.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Jelajahi Website</h4>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#layanan">Layanan</a></li>
+                    <li><a href="#harga">Harga</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> <span id="copyright-name">LaundryWeb</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
