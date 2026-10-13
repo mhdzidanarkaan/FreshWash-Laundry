@@ -490,7 +490,12 @@ section {
     font-size: 0.9rem;
 }
 
-/* Responsive Media Queries */
+.footer-bottom .credit {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
 @media screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;

@@ -2,8 +2,8 @@ const laundryConfig = {
     businessName: "FreshWash Laundry",
     slogan: "Pakaian Bersih, Waktu Lebih Praktis.",
     whatsappNumber: "6281262127339", 
-    address: "[Alamat Demo Laundry] Jl. Pendidikan No. 12, Kel. Sukamaju, Kec. Maju Jaya, Kota Demo.",
-    operationalHours: "Senin - Sabtu: 08.00 - 20.00 WIB",
+    address: "Pasar V Kebun Kelapa",
+    operationalHours: "Senin - Sabtu: 08.00 - 2000 WIB",
     services: [
         {
             name: "Cuci Kering",
